@@ -1,0 +1,119 @@
+/* Import the Montserrat Google font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Extension Popup Window Styling */
+body {
+  font-family: "Montserrat", sans-serif; /* Font from Google Fonts, Backu-up font */
+  padding: 10px; /* Space around the border of the popup window */
+  width: 350px; /* Width of the popup window */
+  min-width: 350px; /* Ensures the popup doesn't shrink below this width */
+  height: 400px; /* Height of the popup window */
+  min-height: 40px; /* Ensures the popup doesn't shrink below this height */
+  background-color: #1d252c; /* Color of the popup window */
+}
+
+/* Title Styling */
+h1 {
+  font-size: 20px; /* Title font size*/
+  font-family: "Montserrat", sans-serif; /* Title font from Google Fonts*/
+  color: white; /* Title Color */
+  margin-top: 0; /* Remove default margin */
+}
+
+/* Text Field Styling */
+textarea {
+  font-family: "Montserrat", sans-serif; /* Te */
+  width: 100%;
+  color: white;
+  border: none;
+  background-color: #26303a;
+  box-sizing: border-box; /* Include padding and border in the width */
+  margin-bottom: 11px;
+  border-radius: 4px; /* Rounded corners */
+  padding: 4px; /* Add padding inside the textarea */
+  resize: none;
+}
+textarea:focus {
+  outline: 2px solid #3b4957; 
+}
+/* Style the placeholder text */
+textarea::placeholder {
+  color: #a0a0a0; /* Light gray placeholder text */
+  opacity: 1; /* Ensure full visibility */
+  font-style: italic; /* Optional: Make placeholder text italic */
+}
+
+textarea::-webkit-scrollbar {
+  width: 1em;
+}
+
+textarea::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+textarea::-webkit-scrollbar-thumb {
+  background-color: #ff8000;
+}
+
+button {
+  margin-top: 0px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  background-color: #26303a;
+  color: white;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  width: 100%; /* Make buttons fill the width of the popup */
+  box-sizing: border-box; /* Include padding and border in the width */
+  margin-bottom: 15px; /* Add margin to all buttons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px; /* Rounded corners */
+  gap: 4px; /* Add spacing between text and dropdown */
+}
+
+/* Apply transform only to the button, not the dropdown */
+button:active:not(:has(select)) {
+  transform: translateY(2px);
+}
+
+/* Styles for the dropdown button container */
+.dropdown-button-container {
+  width: 100%;
+  margin-bottom: 15px; /* Ensure space under the last button */
+}
+
+.dropdown-button-container select {
+  background-color: #3b4957; /* New dropdown background color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  appearance: none; /* Remove default dropdown arrow */
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  padding: 0 24px 0 8px; /* Add padding for the custom arrow */
+  font-size: 14px; /* Match button font size */
+  height: auto; /* Ensure height matches button text */
+  line-height: 1; /* Align text vertically */
+  border-radius: 4px; /* Optional: Add rounded corners */
+  position: relative; /* For custom arrow positioning */
+}
+
+/* Add custom dropdown arrow */
+.dropdown-button-container select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 12px;
+}
+
+.dropdown-button-container select:focus {
+  outline: none;
+}
+
+/* Ensure the last button has space below it */
+#scrape-and-open {
+  margin-bottom: 15px; /* Explicitly add margin to the last button */
+}

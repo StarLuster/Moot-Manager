@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Moots Manager",
+  "version": "2.1",
+  "description": "Provides shortcuts for navigating Letterboxd user profiles.",
+  "icons": {"128": "icons/icon128.png"},
+  "permissions": ["storage", "tabs", "activeTab", "scripting", "declarativeContent"],
+  "host_permissions": ["https://letterboxd.com/*","http://letterboxd.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
+}

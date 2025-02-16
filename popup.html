@@ -1,0 +1,52 @@
+<!-- 
+An extension's interface is called the Popup.
+Popups are mini pages written in HTML like a basic webpage.
+This is the layout of the Moots Manager 'page'.
+-->
+
+<!DOCTYPE html>
+<html>
+
+<!-- Extension Popup Title & Pointer to CSS -->
+<head>
+  <title>Moots Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<!-- Extension Layout -->
+<body>
+
+  <h1><img src="icons/icon128.png" style="float:left;width:20px;height:20px;">&nbsp Moots Manager</h1> <!-- Popup Title Icon & Text -->
+
+  <textarea id="urls" rows="10" cols="50" placeholder="Enter your favorite mutuals, one per line... eg:https://letterboxd.com/StarLuster/..."></textarea> <!-- Text Input Field for URLs -->
+
+  <button id="saveMutuals">Save Mutuals</button> <!-- 1st Button to save URLs -->
+  <button id="open-all">Open All Profile Tabs</button> <!-- 2nd Button to Batch Open URLs -->
+  <button id="open-all-reviews">Open All Review Tabs</button> <!-- 3rd Button to Batch Open Review URLs -->
+
+  <div class="dropdown-button-container"> <!--- 4rd Button/Dropdown Container -->
+    <button id="scrape-and-open"> <!--- 4rd Button -->
+      Open 
+      <select id="number-dropdown"> <!--- Dropdown 1-12 -->
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3" selected>3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+      Most Recent Reviews
+    </button>
+  </div>
+
+  <script src="popup.js"></script><!--- Extension Logic -->
+
+</body>
+
+</html>
